@@ -21,20 +21,21 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "https://formspree.io/abcdefghijklmnopqrstuwxz123456@gmail.com",
+                //url: "https://formspree.io/abcdefghijklmnopqrstuwxz123456@gmail.com",
+                url: "http://mail.joaovasconcelos.com",
                 type: "POST",
-                //data: {
-                //    name: name,
-                //    phone: phone,
-                //    email: email,
-                //    message: message
-                //},
                 data: {
-                  'Nome': name,
-                  'Telefone': phone,
-                  'E-mail': email,
-                  'Pedido': message
+                    name: name,
+                    phone: phone,
+                    email: email,
+                    message: message
                 },
+                //data: {
+                //  'Nome': name,
+                //  'Telefone': phone,
+                //  'E-mail': email,
+                //  'Pedido': message
+                //},
                 dataType: "json",
                 cache: false,
                 success: function() {
